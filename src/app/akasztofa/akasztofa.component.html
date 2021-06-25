@@ -1,0 +1,31 @@
+<body>
+  <div class="gombom">
+    <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
+      Vissza
+    </button>
+  </div>
+  <div *ngIf="lehetoseg > 0 && !nyert">
+    <h1>Lehetőségek: {{ lehetoseg }}</h1>
+    <div class="betuk">
+      <div class="betu" *ngFor="let darab of megjelenitendo">
+        {{ darab }}
+      </div>
+    </div>
+    <div class="gombok">
+      <button
+        (click)="lenyomott(betu, j)"
+        class="abc"
+        *ngFor="let betu of alphabet; index as j"
+        id="{{ j }}"
+      >
+        {{ betu }}
+      </button>
+    </div>
+  </div>
+  <div *ngIf="lehetoseg == 0">
+    <h1><strong>VESZTETTÉL</strong></h1>
+  </div>
+  <div *ngIf="nyert">
+    <h1><strong>Gratulálok!</strong></h1>
+  </div>
+</body>

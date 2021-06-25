@@ -1,0 +1,74 @@
+.gombom {
+  text-align: center;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+.btn {
+  border: none;
+  padding: 15px 32px;
+  font-size: 25px;
+  border-radius: 15px;
+  margin: 20px 20px;
+  background-color: rgb(53, 71, 110);
+}
+.btn:hover {
+  background-color: rgba(126, 126, 126, 0.445);
+}
+
+.betuk {
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.betu {
+  margin-top: 20px;
+  margin-right: 5px;
+  text-align: center;
+  /*border-bottom: 3px solid rgb(236, 241, 157);*/
+  padding-bottom: 3px;
+  color: rgb(236, 241, 157);
+}
+
+.gombok {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.abc:disabled {
+  background-color: rgba(128, 128, 128, 0.479);
+  color: rgba(253, 253, 253, 0.425);
+}
+.abc {
+  width: 70px;
+  height: 40px;
+  margin-top: 1px;
+  background-color: rgb(58, 76, 240);
+  color: rgba(253, 253, 253, 0.911);
+  border-radius: 10px;
+}
+body {
+  background: url(../../kepek/32822.jpg);
+  background-size: cover;
+}
+@media screen and (max-width: 650px) {
+  .gombok {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .abc {
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 45%;
+    margin-right: 45%;
+    border-radius: 15px;
+  }
+}
+h1 {
+  color: rgb(164, 149, 248);
+}
