@@ -1,0 +1,36 @@
+.vissza {
+  text-align: center;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.486);
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+.btn {
+  border: none;
+  padding: 15px 32px;
+  font-size: 25px;
+  border-radius: 15px;
+  margin: 20px 20px;
+  background-color: rgb(53, 71, 110);
+}
+.btn:hover {
+  background-color: rgba(126, 126, 126, 0.445);
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+}
+
+.oszlopok {
+  float: left;
+  margin-left: 5px;
+  width: 10%;
+  background-color: rgb(130, 132, 160);
+}
+body {
+  background: url(../../kepek/32822.jpg);
+  background-size: cover;
+}

@@ -1,0 +1,21 @@
+<body>
+  <div class="szamologep">
+    <a routerLink="/contact">
+      <button ly-button raised bg="primary" class="btn akasztofa">
+        <strong>Contact</strong>
+      </button>
+    </a>
+  </div>
+
+  <div class="bejelentkezes">
+    <div>
+      <input placeholder="Név" onfocus="this.placeholder = ''" id="nev" />
+    </div>
+    <div></div>
+    <div class="login">
+      <button ly-button raised bg="primary" (click)="gombnyomas()">
+        Login
+      </button>
+    </div>
+  </div>
+</body>
