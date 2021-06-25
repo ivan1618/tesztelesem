@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { timer } from 'rxjs';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-sorter',
@@ -8,15 +10,20 @@ import { timer } from 'rxjs';
   styleUrls: ['./sorter.component.scss'],
 })
 export class SorterComponent implements OnInit {
+  nev!: string;
   maximum = 200;
   myModel = 50;
   tarto = 50;
   maxgeneral: number = 900;
   hanyDarab: number = 50;
   szamok: number[] = [];
-  constructor() {}
+  constructor(public data: PostService, public router: Router) {}
 
   ngOnInit(): void {
+    this.nev = this.data.getbejel();
+    if (this.nev === undefined) {
+      this.router.navigateByUrl('/');
+    }
     this.maxgeneral = window.innerHeight - window.innerHeight * 0.2;
 
     this.szamletrehozas(this.myModel);

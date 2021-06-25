@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-akasztofa',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./akasztofa.component.scss'],
 })
 export class AkasztofaComponent implements OnInit {
-  constructor() {}
+  nev!: string;
+  constructor(public data: PostService, public router: Router) {}
   nyert = false;
   lehetoseg = 8;
   szavak = [
@@ -1570,6 +1573,10 @@ export class AkasztofaComponent implements OnInit {
   indexek: number[] = [];
 
   ngOnInit(): void {
+    this.nev = this.data.getbejel();
+    if (this.nev === undefined) {
+      this.router.navigateByUrl('/');
+    }
     this.valasztott = Math.round(Math.random() * this.szavak.length);
     this.szo = Array.from(this.szavak[this.valasztott]);
     for (let i = 0; i < this.szo.length; i++) {
