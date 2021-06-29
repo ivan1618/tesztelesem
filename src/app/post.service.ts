@@ -17,8 +17,12 @@ export class PostService {
 
   bejel(nev: string) {
     this.nev = nev;
+    window.localStorage.setItem('nev', nev);
   }
   getbejel() {
+    if (window.localStorage.getItem('nev')) {
+      this.nev = window.localStorage.getItem('nev')!;
+    }
     return this.nev;
   }
 
