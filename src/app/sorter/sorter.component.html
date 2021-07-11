@@ -1,36 +1,38 @@
 <body>
-  <div class="vissza">
-    <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
-      Vissza
-    </button>
-    <div class="slidecontainer">
-      <mat-slider
-        style="margin-top: 20px"
-        [(ngModel)]="myModel"
-        min="10"
-        [max]="getmaxim()"
-        thumbLabel
-        (click)="szamletrehozas(myModel)"
-        color="primary"
-      ></mat-slider>
+  <div style="touch-action: manipulation">
+    <div class="vissza">
+      <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
+        Vissza
+      </button>
+      <div class="slidecontainer">
+        <mat-slider
+          style="margin-top: 20px"
+          [(ngModel)]="myModel"
+          min="10"
+          [max]="getmaxim()"
+          thumbLabel
+          (click)="szamletrehozas(myModel)"
+          color="primary"
+        ></mat-slider>
+      </div>
+      <button
+        ly-button
+        raised
+        bg="primary"
+        class="btn"
+        (click)="BubbleSort(szamok)"
+      >
+        Sort
+      </button>
     </div>
-    <button
-      ly-button
-      raised
-      bg="primary"
-      class="btn"
-      (click)="BubbleSort(szamok)"
-    >
-      Sort
-    </button>
-  </div>
 
-  <div class="parent">
-    <p
-      id="asd"
-      class="oszlopok"
-      *ngFor="let szam of szamok"
-      [style.height.px]="szam"
-    ></p>
+    <div class="parent">
+      <p
+        id="asd"
+        class="oszlopok"
+        *ngFor="let szam of szamok"
+        [style.height.px]="szam"
+      ></p>
+    </div>
   </div>
 </body>

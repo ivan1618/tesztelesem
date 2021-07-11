@@ -1,31 +1,54 @@
 <body>
-  <div class="gombom">
-    <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
-      Vissza
-    </button>
-  </div>
-  <div *ngIf="lehetoseg > 0 && !nyert">
-    <h1>Lehetőségek: {{ lehetoseg }}</h1>
-    <div class="betuk">
-      <div class="betu" *ngFor="let darab of megjelenitendo">
-        {{ darab }}
-      </div>
-    </div>
-    <div class="gombok">
-      <button
-        (click)="lenyomott(betu, j)"
-        class="abc"
-        *ngFor="let betu of alphabet; index as j"
-        id="{{ j }}"
-      >
-        {{ betu }}
+  <div style="touch-action: manipulation">
+    <div class="gombom">
+      <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
+        Vissza
       </button>
     </div>
-  </div>
-  <div *ngIf="lehetoseg == 0">
-    <h1><strong>VESZTETTÉL</strong></h1>
-  </div>
-  <div *ngIf="nyert">
-    <h1><strong>Gratulálok!</strong></h1>
+    <div *ngIf="lehetoseg > 0 && !nyert">
+      <h1>Lehetőségek: {{ lehetoseg }}</h1>
+      <div class="betuk">
+        <div class="betu" *ngFor="let darab of megjelenitendo">
+          {{ darab }}
+        </div>
+      </div>
+      <div class="gombok">
+        <button
+          (click)="lenyomott(betu, j)"
+          class="abc"
+          *ngFor="let betu of alphabet; index as j"
+          id="{{ j }}"
+        >
+          {{ betu }}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="lehetoseg == 0">
+      <h1 style="text-align: center; color: aliceblue">
+        <strong>VESZTETTÉL</strong>
+      </h1>
+
+      <h1
+        style="text-align: center; margin-top: 70px; color: rgb(236, 241, 157)"
+      >
+        <strong>{{ szo.join("").toUpperCase() }}</strong>
+      </h1>
+      <div style="display: flex; flex-direction: row; justify-content: center">
+        <button class="btn" (click)="ujra()">Újra</button>
+      </div>
+    </div>
+    <div *ngIf="nyert">
+      <h1 style="text-align: center; color: aliceblue">
+        <strong>Gratulálok!</strong>
+      </h1>
+      <h1
+        style="text-align: center; margin-top: 70px; color: rgb(236, 241, 157)"
+      >
+        <strong>{{ szo.join("").toUpperCase() }}</strong>
+      </h1>
+      <div style="display: flex; flex-direction: row; justify-content: center">
+        <button class="btn" (click)="ujra()">Újra</button>
+      </div>
+    </div>
   </div>
 </body>
