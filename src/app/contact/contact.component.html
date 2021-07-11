@@ -1,30 +1,28 @@
 <body>
-  <div style="touch-action: manipulation">
-    <div class="gombom">
-      <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
-        Vissza
-      </button>
-    </div>
-    <div class="email">
-      <input placeholder="Email" [(ngModel)]="emailje" />
-    </div>
-    <div class="email">
-      <input placeholder="Tárgy" [(ngModel)]="subject" />
-    </div>
-    <div class="email">
-      <input placeholder="Üzenet" [(ngModel)]="text" />
-    </div>
+  <div class="gombom">
+    <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
+      Vissza
+    </button>
+  </div>
+  <div class="email">
+    <input placeholder="Email" [(ngModel)]="emailje" />
+  </div>
+  <div class="email">
+    <input placeholder="Tárgy" [(ngModel)]="subject" />
+  </div>
+  <div class="email">
+    <input placeholder="Üzenet" [(ngModel)]="text" />
+  </div>
 
-    <div class="email">
-      <button
-        ly-button
-        raised
-        bg="primary"
-        class="btnkuld"
-        (click)="emailerosit()"
-      >
-        Küldés
-      </button>
-    </div>
+  <div class="email">
+    <button
+      ly-button
+      raised
+      bg="primary"
+      class="btnkuld"
+      (click)="emailerosit()"
+    >
+      Küldés
+    </button>
   </div>
 </body>
