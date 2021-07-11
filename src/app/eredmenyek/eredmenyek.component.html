@@ -1,24 +1,26 @@
 <body>
-  <div class="gombom">
-    <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
-      Vissza
-    </button>
-  </div>
-  <div *ngIf="!isLoading">
-    <a *ngIf="uzenetek">
-      <div class="uzenetek" *ngFor="let uzenet of uzenetek">
-        <a>{{ uzenet.uzenete }}</a>
-        <button class="torles" (click)="torles(uzenet)" ly-button raised>
-          Törlés
-        </button>
-      </div></a
-    >
-    <a *ngIf="uzenetek.length < 1"
-      ><div class="uzenetek">
-        <a>Még nem volt számolás</a>
-      </div></a
-    >
-  </div>
+  <div class="app">
+    <div class="gombom">
+      <button ly-button raised bg="primary" class="btn" routerLink="/fooldal">
+        Vissza
+      </button>
+    </div>
+    <div *ngIf="!isLoading">
+      <a *ngIf="uzenetek">
+        <div class="uzenetek" *ngFor="let uzenet of uzenetek">
+          <a>{{ uzenet.uzenete }}</a>
+          <button class="torles" (click)="torles(uzenet)" ly-button raised>
+            Törlés
+          </button>
+        </div></a
+      >
+      <a *ngIf="uzenetek.length < 1"
+        ><div class="uzenetek">
+          <a>Még nem volt számolás</a>
+        </div></a
+      >
+    </div>
 
-  <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </div>
 </body>
