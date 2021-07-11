@@ -42,4 +42,7 @@ mat-spinner {
 body {
   background: url(../../kepek/32822.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: auto;
 }

@@ -2,13 +2,13 @@ body {
   background: url(../../kepek/32822.jpg);
   background-size: cover;
 }
+
 .szamologep {
   padding: 30px 10px;
 
   text-align: center;
   border: none;
   border-radius: 10px;
-  /*background-image: url(../../kepek/240_F_350673044_Vk4F9MkrITz7To1MDCXaHuNE1IV76fVS.jpg);*/
   background-color: rgba(128, 128, 128, 0.486);
   display: flex;
   justify-content: space-between;
@@ -40,4 +40,9 @@ body {
 .akasztofa {
   position: relative;
   right: 17px;
+}
+.contact {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

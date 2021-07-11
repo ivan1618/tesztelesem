@@ -34,7 +34,7 @@
 }
 
 .gombok {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -54,6 +54,7 @@
 body {
   background: url(../../kepek/32822.jpg);
   background-size: cover;
+  overflow: hidden;
 }
 @media screen and (max-width: 650px) {
   .gombok {
