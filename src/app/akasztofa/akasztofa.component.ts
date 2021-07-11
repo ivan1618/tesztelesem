@@ -11,7 +11,7 @@ export class AkasztofaComponent implements OnInit {
   nev!: string;
   constructor(public data: PostService, public router: Router) {}
   nyert = false;
-  lehetoseg = 8;
+  lehetoseg!: number;
   szavak = [
     'people',
     'history',
@@ -1573,6 +1573,9 @@ export class AkasztofaComponent implements OnInit {
   indexek: number[] = [];
 
   ngOnInit(): void {
+    this.nyert = false;
+    this.lehetoseg = 8;
+    this.megjelenitendo = [];
     this.nev = this.data.getbejel();
     if (this.nev === undefined) {
       this.router.navigateByUrl('/');
@@ -1608,5 +1611,8 @@ export class AkasztofaComponent implements OnInit {
     if (this.megjelenitendo.toString() == this.szo.toString()) {
       this.nyert = true;
     }
+  }
+  ujra() {
+    this.ngOnInit();
   }
 }
