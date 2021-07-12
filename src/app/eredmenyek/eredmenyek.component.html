@@ -10,7 +10,13 @@
         <a *ngIf="uzenetek">
           <div class="uzenetek" *ngFor="let uzenet of uzenetek">
             <a>{{ uzenet.uzenete }}</a>
-            <button class="torles" (click)="torles(uzenet)" ly-button raised>
+            <button
+              style="margin-top: 10px; margin-bottom: 10px"
+              class="torles"
+              (click)="torles(uzenet)"
+              ly-button
+              raised
+            >
               Törlés
             </button>
           </div></a
