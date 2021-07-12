@@ -40,11 +40,17 @@ export class SzamoloComponent implements OnInit {
 
   szamlalo(szam: string) {
     breakme: if (
-      !this.ertek ||
+      (!this.ertek &&
+        szam !== '*' &&
+        szam !== '/' &&
+        szam !== '+' &&
+        szam !== '-' &&
+        szam !== '=') ||
       (szam !== '*' &&
         szam !== '/' &&
         szam !== '+' &&
         szam !== '-' &&
+        szam !== '=' &&
         !this.ertek2)
     ) {
       if (this.ertek) {
@@ -65,8 +71,19 @@ export class SzamoloComponent implements OnInit {
       this.eredmeny = szam;
       break breakme;
     } else if (
-      (this.ertek && this.ertek2 && !this.ertek3) ||
-      (szam != '=' && this.ertek3)
+      (this.ertek &&
+        this.ertek2 &&
+        !this.ertek3 &&
+        szam !== '*' &&
+        szam !== '/' &&
+        szam !== '+' &&
+        szam !== '-') ||
+      (szam != '=' &&
+        this.ertek3 &&
+        szam !== '*' &&
+        szam !== '/' &&
+        szam !== '+' &&
+        szam !== '-')
     ) {
       if (this.ertek3) {
         this.ertek3 += szam;
