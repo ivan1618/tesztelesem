@@ -11,15 +11,17 @@
         {{ darab }}
       </div>
     </div>
-    <div class="gombok">
-      <button
-        (click)="lenyomott(betu, j)"
-        class="abc"
-        *ngFor="let betu of alphabet; index as j"
-        id="{{ j }}"
-      >
-        {{ betu }}
-      </button>
+    <div style="display: flex; justify-content: center" class="container-fluid">
+      <div class="row" style="margin-left: 5px">
+        <div
+          style="text-align: center"
+          *ngFor="let betu of alphabet; index as j"
+        >
+          <button (click)="lenyomott(betu, j)" class="abc" id="{{ j }}">
+            {{ betu }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
   <div *ngIf="lehetoseg == 0">

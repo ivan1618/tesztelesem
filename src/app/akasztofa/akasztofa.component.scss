@@ -40,35 +40,29 @@
   justify-content: center;
 }
 .abc:disabled {
-  background-color: rgba(128, 128, 128, 0.479);
+  background-color: rgba(67, 74, 114, 0.479);
   color: rgba(253, 253, 253, 0.425);
+  border-color: transparent transparent transparent;
 }
 .abc {
-  width: 70px;
-  height: 40px;
-  margin-top: 1px;
+  width: 60px;
+  height: 50px;
+  margin: 3px 3px;
   background-color: rgb(58, 76, 240);
   color: rgba(253, 253, 253, 0.911);
   border-radius: 10px;
+  border-color: transparent transparent rgba(255, 255, 255, 0.315)
+    rgba(255, 255, 255, 0.315);
+}
+.abc:hover:enabled {
+  background-color: rgb(43, 56, 170);
 }
 body {
   background: url(../../kepek/32822.jpg);
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
 }
-@media screen and (max-width: 650px) {
-  .gombok {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .abc {
-    width: 3rem;
-    height: 1.5rem;
-    margin-left: 45%;
-    margin-right: 45%;
-    border-radius: 15px;
-  }
-}
+
 h1 {
   color: rgb(164, 149, 248);
 }
