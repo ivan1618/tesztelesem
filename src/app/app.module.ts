@@ -28,6 +28,7 @@ import { MinimaLight, MinimaDark } from '@alyle/ui/themes/minima';
 import { SorterComponent } from './sorter/sorter.component';
 import { AkasztofaComponent } from './akasztofa/akasztofa.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ContactComponent } from './contact/contact.component';
     LyImageCropperModule,
     HammerModule,
     MatSliderModule,
+    NgbModule,
   ],
   providers: [
     [LyTheme2],

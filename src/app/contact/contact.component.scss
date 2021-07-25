@@ -23,8 +23,23 @@ body {
   background-color: rgba(126, 126, 126, 0.445);
 }
 .email {
+  margin-top: 3px;
   display: flex;
   justify-content: center;
+}
+.in {
+  resize: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 30px;
+  outline: none;
+}
+.uz {
+  height: 90px;
+}
+.uz:focus,
+.in:focus {
+  background-color: rgb(252, 252, 221);
 }
 .btnkuld {
   border: none;

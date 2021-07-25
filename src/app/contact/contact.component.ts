@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {}
 
   emailerosit() {
-    this.text = this.emailje + '\n' + this.text;
+    this.text = this.emailje + '\n' + '\n' + this.text;
     this.data.addEmail(this.subject, this.text);
     this.subject = '';
     this.text = '';
