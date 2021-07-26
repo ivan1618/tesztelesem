@@ -63,7 +63,7 @@ export class PostService {
     };
     this.http
       .post(
-        'https://reallybackend.herokuapp.com/emailek' /* https://localhost:3000/emailek */,
+        'https://backendvercel.herokuapp.com/emailek' /* https://localhost:3000/emailek */,
         email
       )
       .subscribe();
