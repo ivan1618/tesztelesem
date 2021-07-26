@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class PostService {
-  host = 'https://reallybackend.herokuapp.com/api/uzenetek'; //'http://localhost:3000/api/uzenetek';
+  host = 'https://backendvercel.herokuapp.com/api/uzenetek'; //'http://localhost:3000/api/uzenetek';
 
   public uzenetek: Uzenet[] = [];
   private Ujabbak = new Subject<Uzenet[]>();
