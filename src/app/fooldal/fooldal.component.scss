@@ -1,24 +1,25 @@
 body {
   background: url(../../kepek/32822.jpg);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .szamologep {
-  padding: 30px 10px;
+  padding: 20px 10px;
 
   text-align: center;
   border: none;
-  border-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: rgba(128, 128, 128, 0.486);
-  display: flex;
-  justify-content: space-between;
 }
 .btn {
   flex-direction: row;
   border: none;
-  font-size: 150%;
+  font-size: 19px;
+  height: 60px;
+  width: 120px;
   border-radius: 15px;
-  height: 6ex;
   display: inline-block;
   background-color: rgb(53, 71, 110);
 }
@@ -37,10 +38,7 @@ body {
   height: 30px;
   width: 50px;
 }
-.akasztofa {
-  position: relative;
-  right: 17px;
-}
+
 .contact {
   position: absolute;
   right: 20px;

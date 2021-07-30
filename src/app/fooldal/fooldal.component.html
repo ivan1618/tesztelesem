@@ -1,37 +1,73 @@
 <body>
-  <div class="szamologep">
-    <div class="matek">
-      <a routerLink="/szamologep">
-        <button ly-button raised bg="primary" class="btn">
+  <div class="container-fluid szamologep">
+    <div style="margin-bottom: 10px" class="row">
+      <div
+        style="color: Red; display: flex; justify-content: flex-start"
+        class="col"
+      >
+        <button
+          routerLink="/szamologep"
+          ly-button
+          raised
+          bg="primary"
+          class="btn"
+        >
           <strong>Számológép</strong>
         </button>
-      </a>
-      <div class="marginholder"></div>
-      <a routerLink="/eredmenyek">
-        <button ly-button raised bg="primary" class="btn">
-          <strong>Eredmények</strong>
-        </button>
-      </a>
-    </div>
-
-    <div class="marginholder">
-      <a routerLink="/sorter">
-        <button ly-button raised bg="primary" class="btn">
+      </div>
+      <div
+        style="color: Red; display: flex; justify-content: center"
+        class="col"
+      >
+        <button routerLink="/sorter" ly-button raised bg="primary" class="btn">
           <strong>Sorter</strong>
         </button>
-      </a>
-      <div class="marginholder"></div>
-      <a routerLink="/akasztofa">
-        <button ly-button raised bg="primary" class="btn akasztofa">
+      </div>
+      <div
+        style="color: Red; display: flex; justify-content: flex-end"
+        class="col"
+      >
+        <button routerLink="/" ly-button raised class="btn kijel">
+          <strong>Kijelentkezés</strong>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        style="color: Red; display: flex; justify-content: flex-start"
+        class="col"
+      >
+        <button
+          routerLink="/eredmenyek"
+          ly-button
+          raised
+          bg="primary"
+          class="btn"
+        >
+          <strong>Eredmények</strong>
+        </button>
+      </div>
+      <div
+        style="color: Red; display: flex; justify-content: center"
+        class="col"
+      >
+        <button
+          routerLink="/akasztofa"
+          ly-button
+          raised
+          bg="primary"
+          class="btn"
+        >
           <strong>Akasztófa</strong>
         </button>
-      </a>
+      </div>
+      <div
+        style="color: Red; display: flex; justify-content: flex-end"
+        class="col"
+      ></div>
     </div>
-
-    <button routerLink="/" ly-button raised class="btn kijel">
-      <strong>Kijelentkezés</strong>
-    </button>
   </div>
+
   <button
     routerLink="/contact"
     ly-button

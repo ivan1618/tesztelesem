@@ -39,7 +39,8 @@ button:hover {
 
   text-align: right;
   border: none;
-  border-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: rgba(128, 128, 128, 0.486);
   display: right;
 }
@@ -49,9 +50,11 @@ button:hover {
   right: 3%;
   flex-direction: row;
   border: none;
-  font-size: 150%;
+  font-size: 19px;
+  height: 60px;
+  width: 120px;
   border-radius: 15px;
-  height: 6ex;
+
   display: inline-block;
   background-color: rgb(53, 71, 110);
 }
@@ -59,7 +62,7 @@ button:hover {
   background-color: rgba(126, 126, 126, 0.445);
 }
 .login {
-  font-size: 130%;
-  width: 90px;
+  font-size: 19px;
   height: 50px;
+  width: 100px;
 }
