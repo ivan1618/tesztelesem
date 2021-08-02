@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@ngtools/webpack": "^1.2.4",
     "@schematics/angular": "^12.0.4",
     "bootstrap": "^4.6.0",
     "express": "^4.17.1",

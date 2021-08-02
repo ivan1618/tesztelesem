@@ -16,6 +16,10 @@ export class BejelentkezesComponent implements OnInit {
   gombnyomas() {
     if ((<HTMLInputElement>document.getElementById('nev')).value) {
       this.data.bejel((<HTMLInputElement>document.getElementById('nev')).value);
+      this.data.LoginNev(
+        (<HTMLInputElement>document.getElementById('nev')).value
+      );
+
       (<HTMLInputElement>document.getElementById('nev')).value = '';
       this.router.navigateByUrl('/fooldal');
     }
