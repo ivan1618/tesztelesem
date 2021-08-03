@@ -1,2 +1,4 @@
 <button (click)="showfelh()">Nyomj meg</button>
-<p *ngFor="let x of valosak">{{ x }}</p>
+<div *ngFor="let x of valosak; let i = index">
+  {{ x + "----------------" + ido[i] }}
+</div>

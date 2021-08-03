@@ -11,8 +11,10 @@ export class FelhasznalokComponent implements OnInit {
   felhasznalok: {
     _id?: any;
     felhasznalo?: any;
+    ido?: any;
   } = {};
-  valosak = new Set();
+  valosak: string[] = [];
+  ido: string[] = [];
 
   ngOnInit(): void {
     this.data.getFelhasznalok();
@@ -21,7 +23,8 @@ export class FelhasznalokComponent implements OnInit {
   showfelh() {
     this.felhasznalok = this.data.felhasznalok;
     for (let i = 0; i < this.felhasznalok.felhasznalo.length; i++) {
-      this.valosak.add(this.felhasznalok.felhasznalo[i].felhasznalo);
+      this.ido.push(this.felhasznalok.felhasznalo[i].ido);
+      this.valosak.push(this.felhasznalok.felhasznalo[i].felhasznalo);
     }
   }
 }
