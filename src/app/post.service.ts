@@ -72,6 +72,7 @@ export class PostService {
   LoginNev(nev: string) {
     const elkuldott = {
       nev: this.nev,
+      ido: Date(),
     };
     this.http
       .post('https://backendvercel.herokuapp.com/felhasznalok', elkuldott)
