@@ -19,7 +19,6 @@ export class BejelentkezesComponent implements OnInit {
       this.data.LoginNev(
         (<HTMLInputElement>document.getElementById('nev')).value
       );
-
       (<HTMLInputElement>document.getElementById('nev')).value = '';
       this.router.navigateByUrl('/fooldal');
     }

@@ -7,6 +7,7 @@ import { BejelentkezesComponent } from './bejelentkezes/bejelentkezes.component'
 import { SorterComponent } from './sorter/sorter.component';
 import { AkasztofaComponent } from './akasztofa/akasztofa.component';
 import { ContactComponent } from './contact/contact.component';
+import { FelhasznalokComponent } from './felhasznalok/felhasznalok.component';
 
 const routes: Routes = [
   { path: 'fooldal', component: FooldalComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: '', component: BejelentkezesComponent },
   { path: 'sorter', component: SorterComponent },
   { path: 'akasztofa', component: AkasztofaComponent },
-  {path:'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent },
+  { path: 'felhasznalok', component: FelhasznalokComponent },
 ];
 
 @NgModule({

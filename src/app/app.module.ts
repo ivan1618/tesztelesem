@@ -29,6 +29,7 @@ import { SorterComponent } from './sorter/sorter.component';
 import { AkasztofaComponent } from './akasztofa/akasztofa.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FelhasznalokComponent } from './felhasznalok/felhasznalok.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SorterComponent,
     AkasztofaComponent,
     ContactComponent,
+    FelhasznalokComponent,
   ],
   imports: [
     BrowserModule,

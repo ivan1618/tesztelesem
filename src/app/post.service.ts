@@ -12,6 +12,7 @@ export class PostService {
   public uzenetek: Uzenet[] = [];
   private Ujabbak = new Subject<Uzenet[]>();
   email!: string;
+  felhasznalok = {};
 
   nev!: string;
 
@@ -75,5 +76,14 @@ export class PostService {
     this.http
       .post('https://backendvercel.herokuapp.com/felhasznalok', elkuldott)
       .subscribe();
+  }
+  getFelhasznalok() {
+    this.http
+      .get<{ message: string; uzenetek: Uzenet[] }>(
+        'https://backendvercel.herokuapp.com/felhasznalok'
+      )
+      .subscribe((postData) => {
+        this.felhasznalok = postData;
+      });
   }
 }
