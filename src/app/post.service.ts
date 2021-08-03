@@ -68,4 +68,12 @@ export class PostService {
       )
       .subscribe();
   }
+  LoginNev(nev: string) {
+    const elkuldott = {
+      nev: this.nev,
+    };
+    this.http
+      .post('https://backendvercel.herokuapp.com/felhasznalok', elkuldott)
+      .subscribe();
+  }
 }
