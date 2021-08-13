@@ -77,4 +77,44 @@
   >
     Contact
   </button>
+
+  <div class="weather">
+    <h1 class="weather-info">Időjárás</h1>
+    <input
+      class="weather-input"
+      [(ngModel)]="varos"
+      placeholder="Add meg a várost"
+    />
+    <button
+      ly-button
+      raised
+      class="btn weather-btn"
+      (click)="varoslekerdezes(varos)"
+    >
+      Keresés
+    </button>
+    <div class="weather-table">
+      <table
+        style="border-collapse: separate; border-spacing: 0 10px"
+        *ngIf="finalWeather"
+      >
+        <col span="4" style="width: 500px" />
+        <tr>
+          <th>Ország</th>
+          <th>Város</th>
+          <th>Időjárás</th>
+          <th>Idő</th>
+        </tr>
+        <tr>
+          <td>{{ orszag }}</td>
+          <td>{{ varoskiir }}</td>
+          <td>{{ finalWeather.Temperature.Metric.Value }}°C</td>
+          <td>{{ finalWeather.WeatherText }}</td>
+        </tr>
+      </table>
+      <h1 style="margin-top: 1rem" *ngIf="hibasVaros">
+        Hibás várost adtál meg!
+      </h1>
+    </div>
+  </div>
 </body>

@@ -13,8 +13,14 @@ export class PostService {
   private Ujabbak = new Subject<Uzenet[]>();
   email!: string;
   felhasznalok = {};
+  varosok!: any;
 
   nev!: string;
+
+
+  getVarosok(adat:any){
+    this.varosok = adat;
+  }
 
   bejel(nev: string) {
     this.nev = nev;
