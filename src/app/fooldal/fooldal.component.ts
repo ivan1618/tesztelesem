@@ -36,7 +36,7 @@ export class FooldalComponent implements OnInit {
   varoslekerdezes(data: any) {
     this.hibasVaros = false;
     this.varosID_OBSERVABLE = this.http.get<any>(
-      `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=RzgpH4pxBLkuoVG1RiWGmNvdHGNBJVoS&q=${data}&language=hu-hu`
+      `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=RzgpH4pxBLkuoVG1RiWGmNvdHGNBJVoS&q=${data}&language=hu-hu`
     );
     this.varosID_OBSERVABLE.subscribe(
       (data) => {
@@ -48,7 +48,7 @@ export class FooldalComponent implements OnInit {
         this.orszag = data[0].Country.LocalizedName;
         this.varoskiir = data[0].LocalizedName;
         this.idojaras_OBSERVABLE = this.http.get<any>(
-          `http://dataservice.accuweather.com/currentconditions/v1/${this.varosID}?apikey=RzgpH4pxBLkuoVG1RiWGmNvdHGNBJVoS&language=hu-hu&details=false`
+          `https://dataservice.accuweather.com/currentconditions/v1/${this.varosID}?apikey=RzgpH4pxBLkuoVG1RiWGmNvdHGNBJVoS&language=hu-hu&details=false`
         );
         this.idojaras_OBSERVABLE.subscribe((data) => {
           this.finalWeather = data[0];
