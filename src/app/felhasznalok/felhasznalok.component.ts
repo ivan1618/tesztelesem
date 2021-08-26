@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -20,7 +19,7 @@ export class FelhasznalokComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get('https://backendvercel.herokuapp.com/felhasznalok')
+      .get('https://ivanbackend.herokuapp.com/felhasznalok')
       .subscribe((postData) => {
         this.felhasznalok = postData;
         for (let i = 0; i < this.felhasznalok.felhasznalo.length; i++) {
