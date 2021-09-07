@@ -19,7 +19,7 @@ export class FelhasznalokComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get('https://ivanbackend.herokuapp.com/felhasznalok')
+      .get('https://reallybackend.herokuapp.com/felhasznalok')
       .subscribe((postData) => {
         this.felhasznalok = postData;
         for (let i = 0; i < this.felhasznalok.felhasznalo.length; i++) {
