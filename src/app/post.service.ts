@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class PostService {
-  host = 'https://ivanbackend.herokuapp.com/api/uzenetek'; //'http://localhost:3000/api/uzenetek';
+  host = 'https://reallybackend.herokuapp.com/api/uzenetek'; //'http://localhost:3000/api/uzenetek';
 
   public uzenetek: Uzenet[] = [];
   private Ujabbak = new Subject<Uzenet[]>();
@@ -64,7 +64,7 @@ export class PostService {
     };
     this.http
       .post(
-        'https://ivanbackend.herokuapp.com/emailek' /* https://localhost:3000/emailek */,
+        'https://reallybackend.herokuapp.com/emailek' /* https://localhost:3000/emailek */,
         email
       )
       .subscribe();
@@ -75,7 +75,7 @@ export class PostService {
       ido: Date(),
     };
     this.http
-      .post('https://ivanbackend.herokuapp.com/felhasznalok', elkuldott)
+      .post('https://reallybackend.herokuapp.com/felhasznalok', elkuldott)
       .subscribe();
   }
 }
